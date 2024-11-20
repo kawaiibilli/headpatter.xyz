@@ -21,7 +21,6 @@ def hello():
 def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
-    #Note that we don't have blog_post.html ready yet, so this won't work yet!
     return render_template('blog_post.html', post=post)
 
 if __name__ == '__main__':
