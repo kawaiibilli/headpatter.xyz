@@ -1,0 +1,4 @@
+## Environment file
+*.env
+## DB file
+*.db

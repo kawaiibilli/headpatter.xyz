@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="{{url_for('static', filename='style.css')}}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pygs.css') }}">
+    </head>
+
+    <body>
+        <div id=wrapper>
+            <div id="my_links">
+                <nav>
+                    {% for link, name in links %}
+                    <li>
+                        <a href="{{link}}">{{name}}</a>
+                    </li>
+                    {% endfor %}
+                </nav>
+            </div>         
+
+            <div>
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+    </body>
+</html>

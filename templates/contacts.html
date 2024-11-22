@@ -1,6 +1,8 @@
+<title>contacts</title>
 {% extends "layouts.html" %}
 {% block content %}
+<text>
     <h3><strong>{{ post.title }}</strong></h3>
-    Published: {{ post.published }}
     {{ post.html|safe }}
+</text>
 {% endblock %} 

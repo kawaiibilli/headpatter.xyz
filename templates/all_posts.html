@@ -1,0 +1,16 @@
+<title>blog posts</title>
+{% extends "layouts.html" %}
+{% block content %}
+<div id=wrapper>
+    <h3><strong>posts</strong></h3>
+    <div id="post_timeline">
+        <posts>
+            <ul>
+                {% for title, url, _ in all_posts %}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {% endfor %}
+            </ul>
+        </posts>
+    </div>
+</div>
+{% endblock %} 

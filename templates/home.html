@@ -1,0 +1,19 @@
+{% extends "layouts.html" %}
+    {% block content %}
+    <<title>{{post.title}}</title>
+    <text>
+        <h3><strong>{{ post.title }}</strong></h3>
+        {{ post.html|safe }}
+    </text>
+    <aside>
+        <section id="recent_posts">
+            <h4>recent posts:</h4>
+            <ul>
+                {% for title, url, _ in recent_posts %}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </aside>
+
+    {% endblock %} 
