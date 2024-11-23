@@ -48,7 +48,8 @@ def post(name):
 @app.route("/resume")
 def serve_resume():
     imdirpath = os.path.join(".", "static", "files")
-    if filename in os.listdir(imdirpath):
+    cv_file = 'my_cv.pdf'
+    if cv_file in os.listdir(imdirpath):
         return flask.send_from_directory(imdirpath, 'my_cv.pdf')
     else:
         flask.abort(404)
